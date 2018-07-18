@@ -1,0 +1,37 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"4ab141f1-6dac-11e8-be5d-6e7f47d31f77","leaseDurationSeconds":15,"acquireTime":"2018-06-11T21:51:40Z","renewTime":"2018-06-11T21:52:10Z","leaderTransitions":0}'
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.alpha.kubernetes.io/storage-class: default
+      volume.beta.kubernetes.io/storage-provisioner: k8s.io/minikube-hostpath
+    creationTimestamp: 2018-06-11T21:51:39Z
+    finalizers:
+    - kubernetes.io/pvc-protection
+    name: data
+    namespace: default
+    resourceVersion: "26407"
+    selfLink: /api/v1/namespaces/default/persistentvolumeclaims/data
+    uid: 9f03ce28-6dc1-11e8-bd6c-6e7f47d31f77
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 5Gi
+    storageClassName: standard
+    volumeName: pvc-9f03ce28-6dc1-11e8-bd6c-6e7f47d31f77
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 5Gi
+    phase: Bound
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
